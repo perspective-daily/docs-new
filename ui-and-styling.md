@@ -1259,7 +1259,7 @@ To style the `<ActionBar>`, you can use only `background-color` and `color` prop
   <!-- Using the icon property and Icon Fonts -->
   <ActionItem
     position="left"
-    icon="font://&#xf0a8;"
+    icon.decode="font://&#xf0a8;"
     class="fas"
     (tap)="goBack()"
   ></ActionItem>
@@ -1284,7 +1284,7 @@ To style the `<ActionBar>`, you can use only `background-color` and `color` prop
   <NavigationButton visibility="collapsed" />
 
   <!-- Using the icon property and Icon Fonts -->
-  <ActionItem position="left" icon="font://&#xf0a8;" class="fas" tap="goBack" />
+  <ActionItem position="left" icon.decode="font://&#xf0a8;" class="fas" tap="goBack" />
 
   <!-- Creating custom views for ActionItem-->
   <ActionItem ios.position="right">
@@ -4063,8 +4063,8 @@ let listOfItems = ['First', 'Second', 'Third']
 
 #### Events
 
-| Name                  | Description                                              |
-| --------------------- | -------------------------------------------------------- |
+| Name                   | Description                                              |
+| ---------------------- | -------------------------------------------------------- |
 | `selectedIndexChanged` | Emitted when the an item on the segmented bar is tapped. |
 
 #### Native component
@@ -5835,7 +5835,6 @@ The CSS classes for each application and modal root view are:
 ::: tip Note
 In native modals in Angular, the classes are applied to the first layout view in your modal component's HTML. If you are targeting a class that is applied to the root layout in your modal, you would target it with `.ns-dark.your-class`.
 :::
-
 
 For additional information on the Dark Mode support, refer to [this](https://docs.nativescript.org/ui/dark-mode) documentation article.
 
